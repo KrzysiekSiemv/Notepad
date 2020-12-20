@@ -13,7 +13,7 @@ namespace Notatnik
 {
     public partial class Form1 : Form
     {
-        public string filePath = "null";
+        public string filePath = Path.GetTempPath() + "null.txt";
         private string[] lines;
         private int printedLines;
         public Form1()
@@ -30,6 +30,10 @@ namespace Notatnik
             kopiujToolStripMenuItem.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
+
+            TextWriter textWriter = new StreamWriter(filePath);
+            textWriter.Write("null");
+            textWriter.Close();
         }
 
         #region Zmiany kolorów przycisków
@@ -117,38 +121,38 @@ namespace Notatnik
         void newFile()
         {
             TextReader textReader = new StreamReader(filePath);
-            if (filePath != "null" && richTextBox1.Text == "")
+            if (filePath != Path.GetTempPath() + "null.txt" && richTextBox1.Text == "")
             {
                 if (richTextBox1.Text == textReader.ReadToEnd())
                 {
                     this.Text = "Bez tytułu - Notatnik";
                     richTextBox1.Text = "";
-                    filePath = "null";
+                    filePath = Path.GetTempPath() + "null.txt";
                 }
                 else
                 {
                     if (MessageBox.Show("W tym pliku zostały wprowadzone zmiany. Czy chcesz je zapisać", "Notatnik", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        if (filePath == "null")
+                        if (filePath == Path.GetTempPath() + "null.txt")
                             saveAsFile();
                         else
                             saveFile();
                         this.Text = "Bez tytułu - Notatnik";
                         richTextBox1.Text = "";
-                        filePath = "null";
+                        filePath = Path.GetTempPath() + "null.txt";
                     }
                     else
                     {
                         this.Text = "Bez tytułu - Notatnik";
                         richTextBox1.Text = "";
-                        filePath = "null";
+                        filePath = Path.GetTempPath() + "null.txt";
                     }
                 }
             } else
             {
                 this.Text = "Bez tytułu - Notatnik";
                 richTextBox1.Text = "";
-                filePath = "null";
+                filePath = Path.GetTempPath() + "null.txt";
             }
         }
 
@@ -228,7 +232,7 @@ namespace Notatnik
         private void button2_Click(object sender, EventArgs e) { openFile(); }
         private void button3_Click(object sender, EventArgs e)
         {
-            if (filePath == "null")
+            if (filePath == Path.GetTempPath() + "null.txt")
                 saveAsFile();
             else
                 saveFile();
@@ -291,13 +295,13 @@ namespace Notatnik
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             TextReader textReader = new StreamReader(filePath);
-            if (filePath != "null" && richTextBox1.Text == "")
+            if (filePath != Path.GetTempPath() + "null.txt" && richTextBox1.Text == "")
             {
                 if (richTextBox1.Text == textReader.ReadToEnd())
                 {
                     if (MessageBox.Show("W tym pliku zostały wprowadzone zmiany. Czy chcesz je zapisać", "Notatnik", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        if (filePath == "null")
+                        if (filePath == Path.GetTempPath() + "null.txt")
                             saveAsFile();
                         else
                             saveFile();
