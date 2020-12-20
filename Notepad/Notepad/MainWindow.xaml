@@ -5,13 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Notepad"
         mc:Ignorable="d"
-        Title="Notepad" Height="450" Width="800" WindowStartupLocation="CenterScreen" Background="#FF2D2D30">
+        Title="Notepad" Height="600" Width="1024" WindowStartupLocation="CenterScreen" Background="#FF2D2D30">
     <Grid>
-        <Rectangle Fill="#2D2D30" HorizontalAlignment="Left" Width="45"/>
-        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,10,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="26" Content="&#xE8E5;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
-        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,43,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="26" Content="&#xE74E;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
-        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,76,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="26" Content="&#xE792;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
-        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Margin="30,204,0,195" VerticalAlignment="Center" Width="15" Height="20" FontFamily="Segoe MDL2 Assets" FontSize="14" Content="&#xE76C;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0" BorderBrush="{x:Null}" Background="{x:Null}"/>
-        <TextBox Margin="45,0,0,0"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="49*"/>
+            <ColumnDefinition Width="967*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#2D2D30" HorizontalAlignment="Left" Width="36"/>
+        <!-- Przyciski -->
+        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,20,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="24" Content="&#xE7C3;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
+        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,53,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="24" Content="&#xE8E5;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
+        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,86,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="24" Content="&#xE74E;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
+        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" Margin="0,119,0,0" VerticalAlignment="Top" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="24" Content="&#xE792;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
+        <Button HorizontalAlignment="Left" Foreground="#FFFFFF" Background="#2D2D30" VerticalAlignment="Bottom" Width="36" Height="28" FontFamily="Segoe MDL2 Assets" FontSize="24" Content="&#xE8BB;" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderThickness="0"/>
+        <!-- Koniec przycisków -->
+        <RichTextBox Name="poleTekstowe" Margin="36,10,0,0" Background="#FF1E1E1E" Foreground="#FFE6E6E6" BorderBrush="{x:Null}" BorderThickness="0" FontFamily="Calibri" FontSize="16" Grid.ColumnSpan="2">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0" />
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
     </Grid>
 </Window>
