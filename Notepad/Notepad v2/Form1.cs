@@ -226,6 +226,61 @@ namespace Notatnik
             Properties.Settings.Default.Tlo = colorDialog2.Color;
             Properties.Settings.Default.Save();
         }
+
+        void boldText()
+        {
+            if (richTextBox1.SelectedText.Length == 0 | richTextBox1.SelectedText.Length == richTextBox1.Text.Length)
+            {
+                if (!richTextBox1.Font.Bold)
+                    richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Bold);
+                else
+                    richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+            else
+            {
+                if (!richTextBox1.Font.Bold)
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Bold);
+                else
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+        }
+
+        void italicText()
+        {
+            if (richTextBox1.SelectedText.Length == 0 | richTextBox1.SelectedText.Length == richTextBox1.Text.Length)
+            {
+                if (!richTextBox1.Font.Italic)
+                    richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Italic);
+                else
+                    richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+            else
+            {
+                if (!richTextBox1.Font.Italic)
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Italic);
+                else
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+        }
+
+        void underlineText()
+        {
+            if (richTextBox1.SelectedText.Length == 0 | richTextBox1.SelectedText.Length == richTextBox1.Text.Length)
+            {
+                if (!richTextBox1.Font.Underline)
+                    richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Underline);
+                else
+                    richTextBox1.Font = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+            else
+            {
+                if (!richTextBox1.Font.Underline)
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Underline);
+                else
+                    richTextBox1.SelectionFont = new Font(richTextBox1.Font, FontStyle.Regular);
+            }
+        }
+
         #endregion
         #region Skrypty odpowiadające za przyciski
         private void button1_Click(object sender, EventArgs e) { newFile(); }
@@ -256,6 +311,9 @@ namespace Notatnik
         private void button12_Click(object sender, EventArgs e) { redoChanges(); }
         private void button13_Click(object sender, EventArgs e) { changeFontColor(); }
         private void button14_Click(object sender, EventArgs e) { changeBackgroundColor(); }
+        private void button15_Click(object sender, EventArgs e) { underlineText(); }
+        private void button16_Click(object sender, EventArgs e) { italicText(); }
+        private void button17_Click(object sender, EventArgs e) { boldText(); }
         #endregion
         #region Skrypty ToolStripa
         private void kopiujToolStripMenuItem_Click(object sender, EventArgs e) { copySelected(); }
@@ -265,6 +323,9 @@ namespace Notatnik
         private void przywrócToolStripMenuItem_Click(object sender, EventArgs e) { redoChanges(); }
         private void zmieńKolorTłaToolStripMenuItem_Click(object sender, EventArgs e) { changeBackgroundColor(); }
         private void zmieńKolorCzcionkiToolStripMenuItem_Click(object sender, EventArgs e) { changeFontColor(); }
+        private void pogrubienieToolStripMenuItem_Click(object sender, EventArgs e) { boldText(); }
+        private void kursywaToolStripMenuItem_Click(object sender, EventArgs e) { italicText(); }
+        private void podkreślenieToolStripMenuItem_Click(object sender, EventArgs e) { underlineText(); }
         #endregion
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -315,5 +376,6 @@ namespace Notatnik
             else
                 Application.Exit();
         }
+
     }
 }
