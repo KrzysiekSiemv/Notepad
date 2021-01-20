@@ -8,3 +8,4 @@ C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Release\Notepa
 C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Release\Notepad v2.csproj.CoreCompileInputs.cache
 C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Release\Notatnik.exe
 C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Release\Notatnik.pdb
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Release\Notatnik.Update.resources

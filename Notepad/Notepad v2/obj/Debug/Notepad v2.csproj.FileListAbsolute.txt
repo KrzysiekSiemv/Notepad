@@ -8,3 +8,13 @@ C:\Users\Krzysiek\source\repos\Notepad v2\Notepad v2\bin\Debug\Notatnik.exe
 C:\Users\Krzysiek\source\repos\Notepad v2\Notepad v2\bin\Debug\Notatnik.pdb
 C:\Users\Krzysiek\source\repos\Notepad v2\Notepad v2\obj\Debug\Notatnik.exe
 C:\Users\Krzysiek\source\repos\Notepad v2\Notepad v2\obj\Debug\Notatnik.pdb
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\bin\Debug\Notatnik.exe.config
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\bin\Debug\Notatnik.exe
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\bin\Debug\Notatnik.pdb
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notepad v2.csprojAssemblyReference.cache
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.Form1.resources
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.Properties.Resources.resources
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notepad v2.csproj.GenerateResource.cache
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notepad v2.csproj.CoreCompileInputs.cache
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.exe
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.pdb

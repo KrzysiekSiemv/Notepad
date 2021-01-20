@@ -37,7 +37,7 @@ namespace Notatnik.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("900, 512")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1044, 700")]
         public global::System.Drawing.Size FormSize {
             get {
                 return ((global::System.Drawing.Size)(this["FormSize"]));
@@ -56,6 +56,18 @@ namespace Notatnik.Properties {
             }
             set {
                 this["Tlo"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstRun {
+            get {
+                return ((bool)(this["FirstRun"]));
+            }
+            set {
+                this["FirstRun"] = value;
             }
         }
     }

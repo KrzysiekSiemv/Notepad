@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Krzysztof 'KrzysiekSiemv' Smaga")]
 [assembly: AssemblyProduct("Notatnik")]
-[assembly: AssemblyCopyright("Copyright © Krzysztof Smaga 2020")]
+[assembly: AssemblyCopyright("Copyright © Krzysztof Smaga 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

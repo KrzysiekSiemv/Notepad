@@ -6,10 +6,13 @@
       <Value Profile="(Default)">Calibri, 12pt</Value>
     </Setting>
     <Setting Name="FormSize" Type="System.Drawing.Size" Scope="User">
-      <Value Profile="(Default)">900, 512</Value>
+      <Value Profile="(Default)">1044, 700</Value>
     </Setting>
     <Setting Name="Tlo" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

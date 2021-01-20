@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Net;
+using System.Net.NetworkInformation;
 
 namespace Notatnik
 {
@@ -16,6 +18,7 @@ namespace Notatnik
         public string filePath = Path.GetTempPath() + "null.txt";
         private string[] lines;
         private int printedLines;
+
         public Form1()
         {
             InitializeComponent();
@@ -31,9 +34,13 @@ namespace Notatnik
             button8.Enabled = false;
             button9.Enabled = false;
 
-            TextWriter textWriter = new StreamWriter(filePath);
-            textWriter.Write("null");
-            textWriter.Close();
+            if(NetworkInterface.GetIsNetworkAvailable())
+                checkUpdate();
+        }
+
+        public void openFile_FromExplorer(String[] file) { 
+            filePath = file[0];
+            openFile(true);
         }
 
         #region Zmiany kolorów przycisków
@@ -156,18 +163,28 @@ namespace Notatnik
             }
         }
 
-        void openFile()
+        void openFile(bool fromCmd)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (fromCmd)
             {
-                filePath = openFileDialog1.FileName;
-                this.Text = openFileDialog1.FileName + " - Notatnik";
-
-                var fileStream = openFileDialog1.OpenFile();
-                TextReader textReader = new StreamReader(fileStream);
-                richTextBox1.Text = textReader.ReadToEnd();
+                this.Text = filePath + " - Notatnik";
+                StreamReader streamReader = new StreamReader(filePath);
+                richTextBox1.Text = streamReader.ReadToEnd();
+                streamReader.Close();
             }
-            toolStripStatusLabel1.Text = "Otwarto plik " + openFileDialog1.FileName + "!";
+            else
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    filePath = openFileDialog1.FileName;
+                    this.Text = openFileDialog1.FileName + " - Notatnik";
+
+                    var fileStream = openFileDialog1.OpenFile();
+                    TextReader textReader = new StreamReader(fileStream);
+                    richTextBox1.Text = textReader.ReadToEnd();
+                }
+                toolStripStatusLabel1.Text = "Otwarto plik " + openFileDialog1.FileName + "!";
+            }
         }
 
         void saveFile()
@@ -284,7 +301,7 @@ namespace Notatnik
         #endregion
         #region Skrypty odpowiadające za przyciski
         private void button1_Click(object sender, EventArgs e) { newFile(); }
-        private void button2_Click(object sender, EventArgs e) { openFile(); }
+        private void button2_Click(object sender, EventArgs e) { openFile(false); }
         private void button3_Click(object sender, EventArgs e)
         {
             if (filePath == Path.GetTempPath() + "null.txt")
@@ -355,27 +372,37 @@ namespace Notatnik
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            TextReader textReader = new StreamReader(filePath);
-            if (filePath != Path.GetTempPath() + "null.txt" && richTextBox1.Text == "")
+            if (MessageBox.Show("Czy chcesz zapisać plik?", "Notatnik", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                if (richTextBox1.Text == textReader.ReadToEnd())
-                {
-                    if (MessageBox.Show("W tym pliku zostały wprowadzone zmiany. Czy chcesz je zapisać", "Notatnik", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    {
-                        if (filePath == Path.GetTempPath() + "null.txt")
-                            saveAsFile();
-                        else
-                            saveFile();
-                    }
-                    else
-                        Application.Exit();
-                }
+                if (filePath == Path.GetTempPath() + "null.txt")
+                    saveAsFile();
                 else
-                    Application.Exit();
+                    saveFile();
             }
-            else
-                Application.Exit();
         }
 
+        void checkUpdate()
+        {
+            string urlVersion = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/version.txt";
+            WebClient webClient = new WebClient();
+            Stream stream = webClient.OpenRead(urlVersion);
+
+            StreamReader reader = new StreamReader(stream);
+            String content = reader.ReadToEnd();
+
+            if(Application.ProductVersion != content)
+            {
+                toolStripStatusLabel1.Text = "Jest dostępna nowa wersja! Jeżeli chcesz zainstalować, wybierz w Context Menu: Pobierz update!";
+                statusStrip1.BackColor = Color.FromArgb(255, 202, 81, 0);
+
+                updateToolStripMenuItem.Enabled = true;
+            }
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Update update = new Update();
+            update.Show();
+        }
     }
 }
