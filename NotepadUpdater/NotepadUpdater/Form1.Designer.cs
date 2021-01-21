@@ -1,7 +1,7 @@
 ﻿
-namespace Notatnik
+namespace NotepadUpdater
 {
-    partial class Update
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -101,7 +101,7 @@ namespace Notatnik
             this.progressBar1.Size = new System.Drawing.Size(417, 23);
             this.progressBar1.TabIndex = 7;
             // 
-            // Update
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,12 +118,12 @@ namespace Notatnik
             this.MaximumSize = new System.Drawing.Size(457, 298);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(457, 298);
-            this.Name = "Update";
+            this.Name = "Form1";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Update notatnika";
-            this.Load += new System.EventHandler(this.Update_Load);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

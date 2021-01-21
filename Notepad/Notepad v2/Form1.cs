@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
+using System.Diagnostics;
 
 namespace Notatnik
 {
@@ -383,26 +384,28 @@ namespace Notatnik
 
         void checkUpdate()
         {
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
             string urlVersion = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/version.txt";
             WebClient webClient = new WebClient();
             Stream stream = webClient.OpenRead(urlVersion);
 
             StreamReader reader = new StreamReader(stream);
-            String content = reader.ReadToEnd();
+            string content = reader.ReadLine();
 
             if(Application.ProductVersion != content)
             {
                 toolStripStatusLabel1.Text = "Jest dostępna nowa wersja! Jeżeli chcesz zainstalować, wybierz w Context Menu: Pobierz update!";
                 statusStrip1.BackColor = Color.FromArgb(255, 202, 81, 0);
 
-                updateToolStripMenuItem.Enabled = true;
+                updateSeparator.Visible = true;
+                updateToolStripMenuItem.Visible = true;
             }
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Update update = new Update();
-            update.Show();
+            Process.Start("updater.exe");
+            this.Close();
         }
     }
 }

@@ -1,0 +1,10 @@
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\bin\Debug\NotepadUpdater.exe.config
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\bin\Debug\NotepadUpdater.exe
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\bin\Debug\NotepadUpdater.pdb
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.csprojAssemblyReference.cache
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.Properties.Resources.resources
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.csproj.GenerateResource.cache
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.csproj.CoreCompileInputs.cache
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.exe
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.pdb
+C:\Users\Krzysiek\source\repos\NotepadUpdater\NotepadUpdater\obj\Debug\NotepadUpdater.Form1.resources

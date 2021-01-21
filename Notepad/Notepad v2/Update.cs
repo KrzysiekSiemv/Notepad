@@ -38,5 +38,10 @@ namespace Notatnik
         {
             webClient.DownloadFile("https://github.com/KrzysiekSiemv/Notepad/releases/download/" + content + "/Notatnik.exe", Path.GetTempPath() + "\\Notatnik\\NotatnikUpdate.exe");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

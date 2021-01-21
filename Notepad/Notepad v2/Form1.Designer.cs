@@ -65,6 +65,8 @@ namespace Notatnik
             this.pogrubienieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kursywaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.podkreślenieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -76,8 +78,6 @@ namespace Notatnik
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -513,7 +513,7 @@ namespace Notatnik
             this.pogrubienieToolStripMenuItem,
             this.kursywaToolStripMenuItem,
             this.podkreślenieToolStripMenuItem,
-            this.toolStripSeparator4,
+            this.updateSeparator,
             this.updateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(185, 292);
@@ -611,6 +611,21 @@ namespace Notatnik
             this.podkreślenieToolStripMenuItem.Text = "Podkreślenie";
             this.podkreślenieToolStripMenuItem.Click += new System.EventHandler(this.podkreślenieToolStripMenuItem_Click);
             // 
+            // updateSeparator
+            // 
+            this.updateSeparator.Name = "updateSeparator";
+            this.updateSeparator.Size = new System.Drawing.Size(181, 6);
+            this.updateSeparator.Visible = false;
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.updateToolStripMenuItem.Text = "Update!";
+            this.updateToolStripMenuItem.Visible = false;
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.Filter = "Plik tekstowy (*.txt)|*.txt|Tekst sformatowany (*.rtf)|*.rtf|Strona HTML (*.html)" +
@@ -668,20 +683,6 @@ namespace Notatnik
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(181, 6);
-            // 
-            // updateToolStripMenuItem
-            // 
-            this.updateToolStripMenuItem.Enabled = false;
-            this.updateToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.updateToolStripMenuItem.Text = "Update!";
-            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -757,7 +758,7 @@ namespace Notatnik
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator updateSeparator;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
     }
 }
