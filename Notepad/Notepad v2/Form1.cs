@@ -385,7 +385,7 @@ namespace Notatnik
         void checkUpdate()
         {
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-            string urlVersion = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/version.txt";
+            string urlVersion = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/update/version";
             WebClient webClient = new WebClient();
             Stream stream = webClient.OpenRead(urlVersion);
 
