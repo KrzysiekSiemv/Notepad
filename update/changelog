@@ -1,4 +1,4 @@
-== 1.0.2.0 == 20.01.2021 =====================
-= Naprawia błąd usuwający zawartość plików
-= Wprowadzono możliwość aktualizacji notatnika
-==============================================
+== 1.0.3.0 == 26.01.2021 ====================
+    Zapamiętuje główny kolor czcionki
+    Jest informacja na temat wersji programu
+=============================================
