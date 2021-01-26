@@ -1,9 +1,20 @@
+== 1.0.3.3 == 26.01.2021 =====================
+    Dodano możliwość włączania i wyłączania 
+    zawijania wierszy
+    Działające skróty klawiszowe zapisu, 
+    wydruku, itd.
+    Zaktualizowany Updater
+    Małe poprawki
+=========================================
+
+
+
 == 1.0.3.1 == 27.01.2021 ====================
     Usuwa pojawiający się błąd na początku z 
     powodu ustawień głównego koloru czcionki
-=============================================
+========================================
 
 == 1.0.3.0 == 26.01.2021 ====================
     Zapamiętuje główny kolor czcionki
     Jest informacja na temat wersji programu
-=============================================
+========================================
