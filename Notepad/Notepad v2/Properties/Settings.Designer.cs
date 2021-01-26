@@ -70,5 +70,16 @@ namespace Notatnik.Properties {
                 this["FirstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Drawing.Color KolorCzcionki {
+            get {
+                return ((global::System.Drawing.Color)(this["KolorCzcionki"]));
+            }
+            set {
+                this["KolorCzcionki"] = value;
+            }
+        }
     }
 }

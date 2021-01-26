@@ -25,10 +25,11 @@ namespace NotepadUpdater
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12;
-            string urlVersion = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/version.txt";
-            string urlChangelog = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/changelog.txt";
-            
+            string urlVersion = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/update/version";
+            string urlChangelog = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/update/changelog";
+
             webClient = new WebClient();
 
             Stream streamVersion = webClient.OpenRead(urlVersion);
@@ -42,6 +43,12 @@ namespace NotepadUpdater
 
             FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo("Notatnik.exe");
 
+            if (fileVersionInfo.ProductVersion == contentVersion)
+            {
+                MessageBox.Show("Program nie wymaga aktualizacji, gdyż posiada najnowszą wersję oprogramowania", "Update niewymagany", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
+            }
+
             label3.Text = fileVersionInfo.ProductVersion;
             label4.Text = contentVersion;
 
@@ -50,17 +57,17 @@ namespace NotepadUpdater
 
         void downloadUpdate()
         {
-            string urlDownload = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/changelog.txt";
+            string urlDownload = "https://raw.githubusercontent.com/KrzysiekSiemv/Notepad/main/update/download";
             Stream streamDownload = webClient.OpenRead(urlDownload);
             StreamReader readerDownload = new StreamReader(streamDownload);
-            string contentDownload = readerDownload.ReadToEnd();
+            string download = readerDownload.ReadToEnd();
 
             File.Delete("Notatnik.exe");
 
             webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
             webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(client_DownloadFileCompleted);
 
-            webClient.DownloadFileAsync(new Uri(contentDownload), "Notatnik.exe");
+            webClient.DownloadFileAsync(new Uri(download), "Notatnik.exe");
         }
 
         void client_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)

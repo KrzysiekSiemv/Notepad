@@ -19,3 +19,4 @@ C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notepad 
 C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.exe
 C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.pdb
 C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.Update.resources
+C:\Users\Krzysiek\Documents\GitHub\Notepad\Notepad\Notepad v2\obj\Debug\Notatnik.Info.resources

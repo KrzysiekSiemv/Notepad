@@ -78,6 +78,7 @@ namespace Notatnik
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
+            this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -514,15 +515,16 @@ namespace Notatnik
             this.kursywaToolStripMenuItem,
             this.podkreślenieToolStripMenuItem,
             this.updateSeparator,
+            this.informacjeOProgramieToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 292);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 314);
             // 
             // kopiujToolStripMenuItem
             // 
             this.kopiujToolStripMenuItem.Name = "kopiujToolStripMenuItem";
             this.kopiujToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.kopiujToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.kopiujToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.kopiujToolStripMenuItem.Text = "Kopiuj";
             this.kopiujToolStripMenuItem.Click += new System.EventHandler(this.kopiujToolStripMenuItem_Click);
             // 
@@ -530,7 +532,7 @@ namespace Notatnik
             // 
             this.wytnijToolStripMenuItem.Name = "wytnijToolStripMenuItem";
             this.wytnijToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.wytnijToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.wytnijToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.wytnijToolStripMenuItem.Text = "Wytnij";
             this.wytnijToolStripMenuItem.Click += new System.EventHandler(this.wytnijToolStripMenuItem_Click);
             // 
@@ -538,20 +540,20 @@ namespace Notatnik
             // 
             this.wklejToolStripMenuItem.Name = "wklejToolStripMenuItem";
             this.wklejToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.wklejToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.wklejToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.wklejToolStripMenuItem.Text = "Wklej";
             this.wklejToolStripMenuItem.Click += new System.EventHandler(this.wklejToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(196, 6);
             // 
             // cofnijToolStripMenuItem
             // 
             this.cofnijToolStripMenuItem.Name = "cofnijToolStripMenuItem";
             this.cofnijToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.cofnijToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.cofnijToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.cofnijToolStripMenuItem.Text = "Cofnij";
             this.cofnijToolStripMenuItem.Click += new System.EventHandler(this.cofnijToolStripMenuItem_Click);
             // 
@@ -559,39 +561,39 @@ namespace Notatnik
             // 
             this.przywrócToolStripMenuItem.Name = "przywrócToolStripMenuItem";
             this.przywrócToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.przywrócToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.przywrócToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.przywrócToolStripMenuItem.Text = "Przywróć";
             this.przywrócToolStripMenuItem.Click += new System.EventHandler(this.przywrócToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
             // 
             // zmieńKolorTłaToolStripMenuItem
             // 
             this.zmieńKolorTłaToolStripMenuItem.Name = "zmieńKolorTłaToolStripMenuItem";
-            this.zmieńKolorTłaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.zmieńKolorTłaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.zmieńKolorTłaToolStripMenuItem.Text = "Zmień kolor tła";
             this.zmieńKolorTłaToolStripMenuItem.Click += new System.EventHandler(this.zmieńKolorTłaToolStripMenuItem_Click);
             // 
             // zmieńKolorCzcionkiToolStripMenuItem
             // 
             this.zmieńKolorCzcionkiToolStripMenuItem.Name = "zmieńKolorCzcionkiToolStripMenuItem";
-            this.zmieńKolorCzcionkiToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.zmieńKolorCzcionkiToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.zmieńKolorCzcionkiToolStripMenuItem.Text = "Zmień kolor czcionki";
             this.zmieńKolorCzcionkiToolStripMenuItem.Click += new System.EventHandler(this.zmieńKolorCzcionkiToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(181, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(196, 6);
             // 
             // pogrubienieToolStripMenuItem
             // 
             this.pogrubienieToolStripMenuItem.Name = "pogrubienieToolStripMenuItem";
             this.pogrubienieToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.pogrubienieToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.pogrubienieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.pogrubienieToolStripMenuItem.Text = "Pogrubienie";
             this.pogrubienieToolStripMenuItem.Click += new System.EventHandler(this.pogrubienieToolStripMenuItem_Click);
             // 
@@ -599,7 +601,7 @@ namespace Notatnik
             // 
             this.kursywaToolStripMenuItem.Name = "kursywaToolStripMenuItem";
             this.kursywaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.kursywaToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.kursywaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.kursywaToolStripMenuItem.Text = "Kursywa";
             this.kursywaToolStripMenuItem.Click += new System.EventHandler(this.kursywaToolStripMenuItem_Click);
             // 
@@ -607,21 +609,20 @@ namespace Notatnik
             // 
             this.podkreślenieToolStripMenuItem.Name = "podkreślenieToolStripMenuItem";
             this.podkreślenieToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.podkreślenieToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.podkreślenieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.podkreślenieToolStripMenuItem.Text = "Podkreślenie";
             this.podkreślenieToolStripMenuItem.Click += new System.EventHandler(this.podkreślenieToolStripMenuItem_Click);
             // 
             // updateSeparator
             // 
             this.updateSeparator.Name = "updateSeparator";
-            this.updateSeparator.Size = new System.Drawing.Size(181, 6);
-            this.updateSeparator.Visible = false;
+            this.updateSeparator.Size = new System.Drawing.Size(196, 6);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.updateToolStripMenuItem.Text = "Update!";
             this.updateToolStripMenuItem.Visible = false;
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
@@ -683,6 +684,13 @@ namespace Notatnik
             this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
+            // 
+            // informacjeOProgramieToolStripMenuItem
+            // 
+            this.informacjeOProgramieToolStripMenuItem.Name = "informacjeOProgramieToolStripMenuItem";
+            this.informacjeOProgramieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
+            this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -760,6 +768,7 @@ namespace Notatnik
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.ToolStripSeparator updateSeparator;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informacjeOProgramieToolStripMenuItem;
     }
 }
 

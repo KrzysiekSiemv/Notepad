@@ -29,12 +29,13 @@ namespace Notatnik
         {
             richTextBox1.Font = Properties.Settings.Default.Czcionka;
             richTextBox1.BackColor = Properties.Settings.Default.Tlo;
+            richTextBox1.ForeColor = Properties.Settings.Default.KolorCzcionki;
             this.Size = Properties.Settings.Default.FormSize;
             wytnijToolStripMenuItem.Enabled = false;
             kopiujToolStripMenuItem.Enabled = false;
             button8.Enabled = false;
             button9.Enabled = false;
-
+            
             if(NetworkInterface.GetIsNetworkAvailable())
                 checkUpdate();
         }
@@ -230,7 +231,11 @@ namespace Notatnik
             if(colorDialog1.ShowDialog() == DialogResult.OK)
             {
                 if (richTextBox1.SelectedText.Length == 0 | richTextBox1.SelectedText.Length == richTextBox1.Text.Length)
+                {
                     richTextBox1.ForeColor = colorDialog1.Color;
+                    Properties.Settings.Default.KolorCzcionki = colorDialog1.Color;
+                    Properties.Settings.Default.Save();
+                }
                 else
                     richTextBox1.SelectionColor = colorDialog1.Color;
             }
@@ -373,13 +378,16 @@ namespace Notatnik
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Czy chcesz zapisać plik?", "Notatnik", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if(richTextBox1.Text != "")
             {
-                if (filePath == Path.GetTempPath() + "null.txt")
-                    saveAsFile();
-                else
-                    saveFile();
-            }
+                if (MessageBox.Show("Czy chcesz zapisać plik?", "Notatnik", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    if (filePath == Path.GetTempPath() + "null.txt")
+                        saveAsFile();
+                    else
+                        saveFile();
+                }
+            } 
         }
 
         void checkUpdate()
@@ -396,16 +404,29 @@ namespace Notatnik
             {
                 toolStripStatusLabel1.Text = "Jest dostępna nowa wersja! Jeżeli chcesz zainstalować, wybierz w Context Menu: Pobierz update!";
                 statusStrip1.BackColor = Color.FromArgb(255, 202, 81, 0);
-
-                updateSeparator.Visible = true;
                 updateToolStripMenuItem.Visible = true;
             }
         }
 
         private void updateToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Process.Start("updater.exe");
-            this.Close();
+            if (File.Exists(Application.StartupPath + "\\updater.exe"))
+            {
+                Process.Start("updater.exe");
+                this.Close();
+            } else
+            {
+                if(MessageBox.Show("Nie posiadasz programu do aktualizacji Notatnika. Być może dlatego, że jest to wersja Portable lub plik \"updater.exe\" został usunięty.", "Nie ma pliku updater.exe!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Process.Start("https://github.com/KrzysiekSiemv/Notepad/releases");
+                }
+            }
+        }
+
+        private void informacjeOProgramieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
         }
     }
 }
