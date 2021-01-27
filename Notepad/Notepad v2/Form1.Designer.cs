@@ -59,6 +59,11 @@ namespace Notatnik
             this.cofnijToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.przywrócToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.nowyDokumentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zapiszJakoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.otwórzToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.zmieńKolorTłaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zmieńKolorCzcionkiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -66,6 +71,7 @@ namespace Notatnik
             this.kursywaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.podkreślenieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -78,27 +84,27 @@ namespace Notatnik
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.colorDialog2 = new System.Windows.Forms.ColorDialog();
-            this.informacjeOProgramieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.drukujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button19 = new System.Windows.Forms.Button();
+            this.zawijanieWierszyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.panel1.Controls.Add(this.button15);
-            this.panel1.Controls.Add(this.button16);
-            this.panel1.Controls.Add(this.button17);
-            this.panel1.Controls.Add(this.button14);
-            this.panel1.Controls.Add(this.button13);
+            this.panel1.Controls.Add(this.button18);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
@@ -107,19 +113,18 @@ namespace Notatnik
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(44, 639);
+            this.panel1.Size = new System.Drawing.Size(44, 439);
             this.panel1.TabIndex = 0;
             // 
             // button15
             // 
-            this.button15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(5, 481);
+            this.button15.Location = new System.Drawing.Point(72, 0);
             this.button15.Margin = new System.Windows.Forms.Padding(0);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(36, 36);
@@ -129,17 +134,18 @@ namespace Notatnik
             this.toolTip1.SetToolTip(this.button15, "Podkreślenie");
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.MouseEnter += new System.EventHandler(this.button15_MouseEnter);
+            this.button15.MouseLeave += new System.EventHandler(this.button15_MouseLeave);
             // 
             // button16
             // 
-            this.button16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(5, 445);
+            this.button16.Location = new System.Drawing.Point(36, 0);
             this.button16.Margin = new System.Windows.Forms.Padding(0);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(36, 36);
@@ -149,17 +155,18 @@ namespace Notatnik
             this.toolTip1.SetToolTip(this.button16, "Kursywa");
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.button16_Click);
+            this.button16.MouseEnter += new System.EventHandler(this.button16_MouseEnter);
+            this.button16.MouseLeave += new System.EventHandler(this.button16_MouseLeave);
             // 
             // button17
             // 
-            this.button17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button17.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(5, 409);
+            this.button17.Location = new System.Drawing.Point(0, 0);
             this.button17.Margin = new System.Windows.Forms.Padding(0);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(36, 36);
@@ -169,17 +176,18 @@ namespace Notatnik
             this.toolTip1.SetToolTip(this.button17, "Pobrugienie");
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
+            this.button17.MouseEnter += new System.EventHandler(this.button17_MouseEnter);
+            this.button17.MouseLeave += new System.EventHandler(this.button17_MouseLeave);
             // 
             // button14
             // 
-            this.button14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(4, 529);
+            this.button14.Location = new System.Drawing.Point(108, 0);
             this.button14.Margin = new System.Windows.Forms.Padding(0);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(36, 36);
@@ -194,14 +202,13 @@ namespace Notatnik
             // 
             // button13
             // 
-            this.button13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(4, 565);
+            this.button13.Location = new System.Drawing.Point(144, 0);
             this.button13.Margin = new System.Windows.Forms.Padding(0);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(36, 36);
@@ -344,14 +351,13 @@ namespace Notatnik
             // 
             // button6
             // 
-            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(4, 601);
+            this.button6.Location = new System.Drawing.Point(180, 0);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(36, 36);
@@ -475,7 +481,7 @@ namespace Notatnik
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(44, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(984, 10);
+            this.panel2.Size = new System.Drawing.Size(740, 10);
             this.panel2.TabIndex = 1;
             // 
             // richTextBox1
@@ -490,11 +496,12 @@ namespace Notatnik
             this.richTextBox1.ForeColor = System.Drawing.Color.Black;
             this.richTextBox1.Location = new System.Drawing.Point(44, 10);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
+            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedBoth;
             this.richTextBox1.ShowSelectionMargin = true;
-            this.richTextBox1.Size = new System.Drawing.Size(984, 629);
+            this.richTextBox1.Size = new System.Drawing.Size(740, 429);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
+            this.richTextBox1.WordWrap = false;
             this.richTextBox1.SelectionChanged += new System.EventHandler(this.richTextBox1_SelectionChanged);
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
@@ -508,6 +515,13 @@ namespace Notatnik
             this.cofnijToolStripMenuItem,
             this.przywrócToolStripMenuItem,
             this.toolStripSeparator2,
+            this.nowyDokumentToolStripMenuItem,
+            this.zapiszToolStripMenuItem,
+            this.zapiszJakoToolStripMenuItem,
+            this.otwórzToolStripMenuItem,
+            this.drukujToolStripMenuItem,
+            this.toolStripSeparator4,
+            this.zawijanieWierszyToolStripMenuItem,
             this.zmieńKolorTłaToolStripMenuItem,
             this.zmieńKolorCzcionkiToolStripMenuItem,
             this.toolStripSeparator3,
@@ -518,13 +532,13 @@ namespace Notatnik
             this.informacjeOProgramieToolStripMenuItem,
             this.updateToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(200, 314);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(214, 452);
             // 
             // kopiujToolStripMenuItem
             // 
             this.kopiujToolStripMenuItem.Name = "kopiujToolStripMenuItem";
             this.kopiujToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.kopiujToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.kopiujToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.kopiujToolStripMenuItem.Text = "Kopiuj";
             this.kopiujToolStripMenuItem.Click += new System.EventHandler(this.kopiujToolStripMenuItem_Click);
             // 
@@ -532,7 +546,7 @@ namespace Notatnik
             // 
             this.wytnijToolStripMenuItem.Name = "wytnijToolStripMenuItem";
             this.wytnijToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.wytnijToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.wytnijToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.wytnijToolStripMenuItem.Text = "Wytnij";
             this.wytnijToolStripMenuItem.Click += new System.EventHandler(this.wytnijToolStripMenuItem_Click);
             // 
@@ -540,20 +554,20 @@ namespace Notatnik
             // 
             this.wklejToolStripMenuItem.Name = "wklejToolStripMenuItem";
             this.wklejToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.wklejToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.wklejToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.wklejToolStripMenuItem.Text = "Wklej";
             this.wklejToolStripMenuItem.Click += new System.EventHandler(this.wklejToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(196, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(210, 6);
             // 
             // cofnijToolStripMenuItem
             // 
             this.cofnijToolStripMenuItem.Name = "cofnijToolStripMenuItem";
             this.cofnijToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.cofnijToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.cofnijToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.cofnijToolStripMenuItem.Text = "Cofnij";
             this.cofnijToolStripMenuItem.Click += new System.EventHandler(this.cofnijToolStripMenuItem_Click);
             // 
@@ -561,39 +575,77 @@ namespace Notatnik
             // 
             this.przywrócToolStripMenuItem.Name = "przywrócToolStripMenuItem";
             this.przywrócToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.przywrócToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.przywrócToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.przywrócToolStripMenuItem.Text = "Przywróć";
             this.przywrócToolStripMenuItem.Click += new System.EventHandler(this.przywrócToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(210, 6);
+            // 
+            // nowyDokumentToolStripMenuItem
+            // 
+            this.nowyDokumentToolStripMenuItem.Name = "nowyDokumentToolStripMenuItem";
+            this.nowyDokumentToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+            this.nowyDokumentToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.nowyDokumentToolStripMenuItem.Text = "Nowy dokument";
+            this.nowyDokumentToolStripMenuItem.Click += new System.EventHandler(this.nowyDokumentToolStripMenuItem_Click);
+            // 
+            // zapiszToolStripMenuItem
+            // 
+            this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
+            this.zapiszToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.zapiszToolStripMenuItem.Text = "Zapisz";
+            this.zapiszToolStripMenuItem.Click += new System.EventHandler(this.zapiszToolStripMenuItem_Click);
+            // 
+            // zapiszJakoToolStripMenuItem
+            // 
+            this.zapiszJakoToolStripMenuItem.Name = "zapiszJakoToolStripMenuItem";
+            this.zapiszJakoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.zapiszJakoToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.zapiszJakoToolStripMenuItem.Text = "Zapisz jako...";
+            this.zapiszJakoToolStripMenuItem.Click += new System.EventHandler(this.zapiszJakoToolStripMenuItem_Click);
+            // 
+            // otwórzToolStripMenuItem
+            // 
+            this.otwórzToolStripMenuItem.Name = "otwórzToolStripMenuItem";
+            this.otwórzToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.otwórzToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.otwórzToolStripMenuItem.Text = "Otwórz";
+            this.otwórzToolStripMenuItem.Click += new System.EventHandler(this.otwórzToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(210, 6);
             // 
             // zmieńKolorTłaToolStripMenuItem
             // 
             this.zmieńKolorTłaToolStripMenuItem.Name = "zmieńKolorTłaToolStripMenuItem";
-            this.zmieńKolorTłaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.zmieńKolorTłaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.zmieńKolorTłaToolStripMenuItem.Text = "Zmień kolor tła";
             this.zmieńKolorTłaToolStripMenuItem.Click += new System.EventHandler(this.zmieńKolorTłaToolStripMenuItem_Click);
             // 
             // zmieńKolorCzcionkiToolStripMenuItem
             // 
             this.zmieńKolorCzcionkiToolStripMenuItem.Name = "zmieńKolorCzcionkiToolStripMenuItem";
-            this.zmieńKolorCzcionkiToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.zmieńKolorCzcionkiToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.zmieńKolorCzcionkiToolStripMenuItem.Text = "Zmień kolor czcionki";
             this.zmieńKolorCzcionkiToolStripMenuItem.Click += new System.EventHandler(this.zmieńKolorCzcionkiToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(196, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(210, 6);
             // 
             // pogrubienieToolStripMenuItem
             // 
             this.pogrubienieToolStripMenuItem.Name = "pogrubienieToolStripMenuItem";
             this.pogrubienieToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.pogrubienieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.pogrubienieToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.pogrubienieToolStripMenuItem.Text = "Pogrubienie";
             this.pogrubienieToolStripMenuItem.Click += new System.EventHandler(this.pogrubienieToolStripMenuItem_Click);
             // 
@@ -601,7 +653,7 @@ namespace Notatnik
             // 
             this.kursywaToolStripMenuItem.Name = "kursywaToolStripMenuItem";
             this.kursywaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.kursywaToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.kursywaToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.kursywaToolStripMenuItem.Text = "Kursywa";
             this.kursywaToolStripMenuItem.Click += new System.EventHandler(this.kursywaToolStripMenuItem_Click);
             // 
@@ -609,20 +661,27 @@ namespace Notatnik
             // 
             this.podkreślenieToolStripMenuItem.Name = "podkreślenieToolStripMenuItem";
             this.podkreślenieToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.podkreślenieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.podkreślenieToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.podkreślenieToolStripMenuItem.Text = "Podkreślenie";
             this.podkreślenieToolStripMenuItem.Click += new System.EventHandler(this.podkreślenieToolStripMenuItem_Click);
             // 
             // updateSeparator
             // 
             this.updateSeparator.Name = "updateSeparator";
-            this.updateSeparator.Size = new System.Drawing.Size(196, 6);
+            this.updateSeparator.Size = new System.Drawing.Size(210, 6);
+            // 
+            // informacjeOProgramieToolStripMenuItem
+            // 
+            this.informacjeOProgramieToolStripMenuItem.Name = "informacjeOProgramieToolStripMenuItem";
+            this.informacjeOProgramieToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
+            this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
             // 
             // updateToolStripMenuItem
             // 
             this.updateToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
-            this.updateToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
             this.updateToolStripMenuItem.Text = "Update!";
             this.updateToolStripMenuItem.Visible = false;
             this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
@@ -647,9 +706,9 @@ namespace Notatnik
             this.statusStrip1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 639);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 439);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1028, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
@@ -685,26 +744,95 @@ namespace Notatnik
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
-            // informacjeOProgramieToolStripMenuItem
+            // drukujToolStripMenuItem
             // 
-            this.informacjeOProgramieToolStripMenuItem.Name = "informacjeOProgramieToolStripMenuItem";
-            this.informacjeOProgramieToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.informacjeOProgramieToolStripMenuItem.Text = "Informacje o programie";
-            this.informacjeOProgramieToolStripMenuItem.Click += new System.EventHandler(this.informacjeOProgramieToolStripMenuItem_Click);
+            this.drukujToolStripMenuItem.Name = "drukujToolStripMenuItem";
+            this.drukujToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.drukujToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.drukujToolStripMenuItem.Text = "Drukuj";
+            this.drukujToolStripMenuItem.Click += new System.EventHandler(this.drukujToolStripMenuItem_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.panel3.Controls.Add(this.button19);
+            this.panel3.Controls.Add(this.button13);
+            this.panel3.Controls.Add(this.button14);
+            this.panel3.Controls.Add(this.button15);
+            this.panel3.Controls.Add(this.button17);
+            this.panel3.Controls.Add(this.button16);
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Location = new System.Drawing.Point(44, 386);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(288, 36);
+            this.panel3.TabIndex = 4;
+            this.panel3.Visible = false;
+            // 
+            // button18
+            // 
+            this.button18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button18.FlatAppearance.BorderSize = 0;
+            this.button18.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button18.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button18.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.Color.White;
+            this.button18.Location = new System.Drawing.Point(4, 386);
+            this.button18.Margin = new System.Windows.Forms.Padding(0);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(36, 36);
+            this.button18.TabIndex = 20;
+            this.button18.Text = "";
+            this.button18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.button18, "Modyfikowanie czcionki");
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            this.button18.MouseEnter += new System.EventHandler(this.button18_MouseEnter);
+            this.button18.MouseLeave += new System.EventHandler(this.button18_MouseLeave);
+            // 
+            // button19
+            // 
+            this.button19.FlatAppearance.BorderSize = 0;
+            this.button19.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button19.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button19.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.ForeColor = System.Drawing.Color.White;
+            this.button19.Location = new System.Drawing.Point(252, 0);
+            this.button19.Margin = new System.Windows.Forms.Padding(0);
+            this.button19.Name = "button19";
+            this.button19.Size = new System.Drawing.Size(36, 36);
+            this.button19.TabIndex = 20;
+            this.button19.Text = "";
+            this.button19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.toolTip1.SetToolTip(this.button19, "Informacje o programie");
+            this.button19.UseVisualStyleBackColor = true;
+            this.button19.Click += new System.EventHandler(this.button19_Click);
+            this.button19.MouseEnter += new System.EventHandler(this.button19_MouseEnter);
+            this.button19.MouseLeave += new System.EventHandler(this.button19_MouseLeave);
+            // 
+            // zawijanieWierszyToolStripMenuItem
+            // 
+            this.zawijanieWierszyToolStripMenuItem.Name = "zawijanieWierszyToolStripMenuItem";
+            this.zawijanieWierszyToolStripMenuItem.Size = new System.Drawing.Size(213, 22);
+            this.zawijanieWierszyToolStripMenuItem.Text = "Zawijanie wierszy";
+            this.zawijanieWierszyToolStripMenuItem.Click += new System.EventHandler(this.zawijanieWierszyToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(1028, 661);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
             this.ForeColor = System.Drawing.Color.White;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1044, 700);
+            this.MinimumSize = new System.Drawing.Size(800, 500);
             this.Name = "Form1";
             this.Text = "Bez tytułu - Notatnik";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
@@ -714,6 +842,7 @@ namespace Notatnik
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -769,6 +898,16 @@ namespace Notatnik
         private System.Windows.Forms.ToolStripSeparator updateSeparator;
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informacjeOProgramieToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nowyDokumentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zapiszToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zapiszJakoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem otwórzToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripMenuItem drukujToolStripMenuItem;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button19;
+        private System.Windows.Forms.ToolStripMenuItem zawijanieWierszyToolStripMenuItem;
     }
 }
 

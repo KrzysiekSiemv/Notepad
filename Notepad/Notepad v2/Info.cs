@@ -15,6 +15,6 @@ namespace Notatnik
         public Info() { InitializeComponent(); }
         private void Info_Load(object sender, EventArgs e) { label4.Text = Application.ProductVersion; }
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { System.Diagnostics.Process.Start("https://github.com/KrzysiekSiemv"); }
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { System.Diagnostics.Process.Start("https://tipply.pl/u/krzysieksiemv"); }
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) { System.Diagnostics.Process.Start("https://paypal.me/KrzysztofSmaga"); }
     }
 }

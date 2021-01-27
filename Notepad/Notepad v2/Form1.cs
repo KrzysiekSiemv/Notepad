@@ -20,16 +20,15 @@ namespace Notatnik
         private string[] lines;
         private int printedLines;
 
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        public Form1() { InitializeComponent(); }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             richTextBox1.Font = Properties.Settings.Default.Czcionka;
             richTextBox1.BackColor = Properties.Settings.Default.Tlo;
             richTextBox1.ForeColor = Properties.Settings.Default.KolorCzcionki;
+            richTextBox1.WordWrap = Properties.Settings.Default.ZawijanieWierszy;
+            zawijanieWierszyToolStripMenuItem.Checked = Properties.Settings.Default.ZawijanieWierszy;
             this.Size = Properties.Settings.Default.FormSize;
             wytnijToolStripMenuItem.Enabled = false;
             kopiujToolStripMenuItem.Enabled = false;
@@ -74,6 +73,16 @@ namespace Notatnik
         private void button13_MouseLeave(object sender, EventArgs e) { button13.ForeColor = Color.White; }
         private void button14_MouseEnter(object sender, EventArgs e) { button14.ForeColor = Color.FromArgb(40, 167, 69); }
         private void button14_MouseLeave(object sender, EventArgs e) { button14.ForeColor = Color.White; }
+        private void button15_MouseEnter(object sender, EventArgs e) { button15.ForeColor = Color.FromArgb(40, 167, 69); }
+        private void button15_MouseLeave(object sender, EventArgs e) { button15.ForeColor = Color.White; }
+        private void button16_MouseEnter(object sender, EventArgs e) { button16.ForeColor = Color.FromArgb(40, 167, 69); }
+        private void button16_MouseLeave(object sender, EventArgs e) { button16.ForeColor = Color.White; }
+        private void button17_MouseEnter(object sender, EventArgs e) { button17.ForeColor = Color.FromArgb(40, 167, 69); }
+        private void button17_MouseLeave(object sender, EventArgs e) { button17.ForeColor = Color.White; }
+        private void button18_MouseEnter(object sender, EventArgs e) { button18.ForeColor = Color.FromArgb(40, 167, 69); }
+        private void button18_MouseLeave(object sender, EventArgs e) { button18.ForeColor = Color.White; }
+        private void button19_MouseEnter(object sender, EventArgs e) { button19.ForeColor = Color.FromArgb(40, 167, 69); }
+        private void button19_MouseLeave(object sender, EventArgs e) { button19.ForeColor = Color.White; }
         #endregion
         #region Drukowanie
         private void printIt(object sender, EventArgs e)
@@ -332,11 +341,24 @@ namespace Notatnik
         private void button10_Click(object sender, EventArgs e) { pasteText(); }
         private void button11_Click(object sender, EventArgs e) { undoChanges(); }
         private void button12_Click(object sender, EventArgs e) { redoChanges(); }
-        private void button13_Click(object sender, EventArgs e) { changeFontColor(); }
-        private void button14_Click(object sender, EventArgs e) { changeBackgroundColor(); }
-        private void button15_Click(object sender, EventArgs e) { underlineText(); }
-        private void button16_Click(object sender, EventArgs e) { italicText(); }
-        private void button17_Click(object sender, EventArgs e) { boldText(); }
+        private void button13_Click(object sender, EventArgs e) { changeFontColor(); panel3.Visible = false; }
+        private void button14_Click(object sender, EventArgs e) { changeBackgroundColor(); panel3.Visible = false; }
+        private void button15_Click(object sender, EventArgs e) { underlineText(); panel3.Visible = false; }
+        private void button16_Click(object sender, EventArgs e) { italicText(); panel3.Visible = false; }
+        private void button17_Click(object sender, EventArgs e) { boldText(); panel3.Visible = false; }
+        private void button18_Click(object sender, EventArgs e)
+        {
+            if (!panel3.Visible)
+                panel3.Visible = true;
+            else
+                panel3.Visible = false;
+        }
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
+            panel3.Visible = false;
+        }
         #endregion
         #region Skrypty ToolStripa
         private void kopiujToolStripMenuItem_Click(object sender, EventArgs e) { copySelected(); }
@@ -349,6 +371,54 @@ namespace Notatnik
         private void pogrubienieToolStripMenuItem_Click(object sender, EventArgs e) { boldText(); }
         private void kursywaToolStripMenuItem_Click(object sender, EventArgs e) { italicText(); }
         private void podkreślenieToolStripMenuItem_Click(object sender, EventArgs e) { underlineText(); }
+        private void informacjeOProgramieToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
+        }
+        private void nowyDokumentToolStripMenuItem_Click(object sender, EventArgs e) { newFile(); }
+        private void zapiszToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (filePath == Path.GetTempPath() + "null.txt")
+                saveAsFile();
+            else
+                saveFile();
+        }
+        private void zapiszJakoToolStripMenuItem_Click(object sender, EventArgs e) { saveAsFile(); }
+        private void otwórzToolStripMenuItem_Click(object sender, EventArgs e) { openFile(false); }
+        private void drukujToolStripMenuItem_Click(object sender, EventArgs e) { printPreviewDialog1.ShowDialog(); }
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (File.Exists(Application.StartupPath + "\\updater.exe"))
+            {
+                Process.Start("updater.exe");
+                this.Close();
+            }
+            else
+            {
+                if (MessageBox.Show("Nie posiadasz programu do aktualizacji Notatnika. Być może dlatego, że jest to wersja Portable lub plik \"updater.exe\" został usunięty.", "Nie ma pliku updater.exe!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Process.Start("https://github.com/KrzysiekSiemv/Notepad/releases");
+                }
+            }
+        }
+        private void zawijanieWierszyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!richTextBox1.WordWrap)
+            {
+                richTextBox1.WordWrap = true;
+                Properties.Settings.Default.ZawijanieWierszy = true;
+                Properties.Settings.Default.Save();
+                zawijanieWierszyToolStripMenuItem.Checked = true;
+            }
+            else
+            {
+                richTextBox1.WordWrap = false;
+                Properties.Settings.Default.ZawijanieWierszy = false;
+                Properties.Settings.Default.Save();
+                zawijanieWierszyToolStripMenuItem.Checked = false;
+            }
+        }
         #endregion
 
         private void Form1_SizeChanged(object sender, EventArgs e)
@@ -406,27 +476,6 @@ namespace Notatnik
                 statusStrip1.BackColor = Color.FromArgb(255, 202, 81, 0);
                 updateToolStripMenuItem.Visible = true;
             }
-        }
-
-        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (File.Exists(Application.StartupPath + "\\updater.exe"))
-            {
-                Process.Start("updater.exe");
-                this.Close();
-            } else
-            {
-                if(MessageBox.Show("Nie posiadasz programu do aktualizacji Notatnika. Być może dlatego, że jest to wersja Portable lub plik \"updater.exe\" został usunięty.", "Nie ma pliku updater.exe!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
-                    Process.Start("https://github.com/KrzysiekSiemv/Notepad/releases");
-                }
-            }
-        }
-
-        private void informacjeOProgramieToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Info info = new Info();
-            info.Show();
         }
     }
 }

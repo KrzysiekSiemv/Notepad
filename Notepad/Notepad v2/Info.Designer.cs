@@ -92,7 +92,7 @@ namespace Notatnik
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(181, 89);
+            this.linkLabel2.Location = new System.Drawing.Point(181, 64);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(91, 13);
             this.linkLabel2.TabIndex = 5;
@@ -104,7 +104,7 @@ namespace Notatnik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 111);
+            this.ClientSize = new System.Drawing.Size(284, 86);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.linkLabel1);
@@ -113,9 +113,9 @@ namespace Notatnik
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(300, 150);
+            this.MaximumSize = new System.Drawing.Size(300, 125);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(300, 150);
+            this.MinimumSize = new System.Drawing.Size(300, 125);
             this.Name = "Info";
             this.Text = "Informacje o programie";
             this.Load += new System.EventHandler(this.Info_Load);

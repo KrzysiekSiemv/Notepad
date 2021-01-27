@@ -73,12 +73,25 @@ namespace Notatnik.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Black")]
         public global::System.Drawing.Color KolorCzcionki {
             get {
                 return ((global::System.Drawing.Color)(this["KolorCzcionki"]));
             }
             set {
                 this["KolorCzcionki"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool ZawijanieWierszy {
+            get {
+                return ((bool)(this["ZawijanieWierszy"]));
+            }
+            set {
+                this["ZawijanieWierszy"] = value;
             }
         }
     }
