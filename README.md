@@ -1,4 +1,5 @@
 # Notepad
+![GitHub all releases](https://img.shields.io/github/downloads/KrzysiekSiemv/Notepad/total)<br>
 Notatnik mojej edycji. Nic więcej.
 
 Do uruchomienia wymagane jest:<br>
